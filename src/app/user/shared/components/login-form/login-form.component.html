@@ -1,3 +1,17 @@
-<p>
-  login-form works!
-</p>
+<div class="loginForm">
+  <form class="loginForm__form" [formGroup]="loginForm" novalidate (submit)="submitLoginForm()">
+    <mat-form-field>
+      <input matInput placeholder="Login" type="text" formControlName="login" minlength="4">
+      <mat-hint align="end">{{loginForm.value.login.length}} / 4</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Password" type="password" formControlName="password" minlength="6">
+      <mat-hint align="end">{{loginForm.value.password.length}} / 6</mat-hint>
+    </mat-form-field>
+
+    <div class="loginForm__submitWrapper">
+      <button mat-raised-button color="primary" role="submit">Login</button>
+    </div>
+  </form>
+</div>

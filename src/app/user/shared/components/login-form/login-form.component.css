@@ -1,0 +1,17 @@
+.loginForm {
+  margin-top: 50px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.loginForm__form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginForm__submitWrapper {
+  margin-top: 20px;
+  text-align: right;
+}

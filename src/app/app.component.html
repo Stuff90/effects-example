@@ -1,7 +1,13 @@
 <div>
+  <mat-toolbar color="accent">
+    <mat-toolbar-row class="menu">
+      <span>My Awesome app !</span>
+      <button mat-button class="menu__link" routerLink="/">Home</button>
+      <button mat-button class="menu__link" routerLink="/login">Login</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-  <button mat-raised-button routerLink="/login">Login</button><router-outlet>
-  </router-outlet>
-
+  <mat-progress-bar mode="indeterminate" *ngIf="isApplicationLoading | async"></mat-progress-bar>
+  <router-outlet></router-outlet>
 </div>
 
