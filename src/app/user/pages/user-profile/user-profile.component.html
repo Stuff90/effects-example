@@ -1,3 +1,6 @@
-<p>
-  user-profile works!
-</p>
+<div class="userProfilePage">
+  <div *ngFor="let currentUser of (user | async)">
+    <h4>Welcome {{currentUser.firstname}} {{currentUser.lastname}}</h4>
+    <p>Username: {{currentUser.username}}</p>
+  </div>
+</div>

@@ -7,7 +7,7 @@ export const userRoutes: Routes = [
     path: 'login',
     component: UserLoginComponent
   }, {
-    path: 'user/:id',
+    path: 'user/me',
     component: UserProfileComponent,
     canActivate: [
       UserProfileGuard

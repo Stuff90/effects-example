@@ -13,21 +13,25 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import 'rxjs/add/observable/of';
+import 'rxjs/add/observable/throw';
+import 'rxjs/add/observable/fromPromise';
 
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
+import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/race';
 import 'rxjs/add/operator/delay';
-import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/mapTo';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/distinct';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/switchMapTo';
-import 'rxjs/add/operator/distinct';
 import 'rxjs/add/operator/distinctUntilChanged';
 
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
+import { HomeModule } from './home/home.module';
 import { appRoutes } from './app.routing';
 import { appReducer } from './shared/app.reducer';
 
@@ -51,7 +55,8 @@ import { appReducer } from './shared/app.reducer';
       appRoutes, { enableTracing: false }
     ),
 
-    UserModule
+    UserModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [
